@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OVHcloud Roubaix - Souveraineté Numérique & Infrastructure Cloud Européenne</title>
+  <meta name="description" content="Découvrez le centre d'excellence d'OVHcloud à Roubaix. Infrastructure cloud souveraine, hébergement de haute performance et datacenters écoresponsables au cœur des Hauts-de-France.">
+  <meta name="keywords" content="OVHcloud, Roubaix, Cloud Souverain, Datacenter Roubaix, Hébergement Web, Cloud Privé, Cloud Public, Hauts-de-France, Infrastructure IT, SecNumCloud">
+  <style>
+    :root {
+      --primary: #000E9C;
+      --primary-hover: #000B7A;
+      --accent: #00A3E0;
+      --bg-dark: #0A0F24;
+      --bg-light: #F8FAFC;
+      --text-dark: #1E293B;
+      --text-light: #F8FAFC;
+      --gray-border: #E2E8F0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: var(--text-light);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--bg-dark) 0%, var(--primary) 100%);
+      color: var(--text-light);
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .hero-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: rgba(0, 163, 224, 0.2);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #CBD5E1;
+      margin-bottom: 2rem;
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 0.9rem 2.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.2s, transform 0.2s;
+      box-shadow: 0 4px 14px rgba(0, 163, 224, 0.4);
+    }
+
+    .cta-btn:hover {
+      background-color: #0082B3;
+      transform: translateY(-2px);
+    }
+
+    .features {
+      max-width: 1100px;
+      margin: -3rem auto 4rem auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .card {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--gray-border);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .card p {
+      color: #475569;
+      font-size: 0.98rem;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title p {
+      color: #64748B;
+      font-size: 1.1rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .content-box h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .content-box p {
+      margin-bottom: 1rem;
+      color: #334155;
+    }
+
+    .stats {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      padding: 4rem 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .stats-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .stat-item h4 {
+      font-size: 2.8rem;
+      color: var(--accent);
+      margin-bottom: 0.3rem;
+    }
+
+    .stat-item p {
+      color: #94A3B8;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    footer {
+      background-color: #030712;
+      color: #64748B;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.9rem;
+      border-top: 1px solid #1E293B;
+    }
+
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1.05rem;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      OVHcloud <span>Roubaix</span>
+    </div>
+    <nav>
+      <a href="#ancrage">Datacenters Roubaix</a>
+      <a href="#offres">Solutions Cloud</a>
+      <a href="#engagement">Eco-Responsabilité</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-container">
+      <div class="badge">Ancrage Historique & Souveraineté</div>
+      <h1>Innovation Cloud Européenne, Né à Roubaix</h1>
+      <p><strong>"Innovation for Freedom"</strong> — Le cloud souverain, hautement performant et durable, propulsé depuis le siège historique d'OVHcloud dans les Hauts-de-France.</p>
+      <a href="#offres" class="cta-btn">Découvrir nos infrastructures</a>
+    </div>
+  </section>
+
+  <section class="features" id="offres">
+    <div class="card">
+      <div class="card-icon">🏢</div>
+      <h3>Datacenters de Roubaix</h3>
+      <p>Le cœur battant de nos infrastructures européennes. Des serveurs dédiés et du Cloud Public conçus et assemblés localement avec une sécurité optimale.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🛡️</div>
+      <h3>Cloud Souverain & SecNumCloud</h3>
+      <p>Garantie absolue de protection de vos données, à l'abri des lois extraterritoriales, conforme aux plus hauts standards de sécurité européens.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🌱</div>
+      <h3>Watercooling & Eco-Design</h3>
+      <p>Technologie pionnière de refroidissement liquide pour un PUE (Power Usage Effectiveness) ultra-performant et une empreinte carbone maîtrisée.</p>
+    </div>
+  </section>
+
+  <section class="section" id="ancrage">
+    <div class="section-title">
+      <h2>Roubaix, Capitale Européenne du Cloud</h2>
+      <p>L'alliance du savoir-faire industriel nordiste et de la haute technologie mondiale.</p>
+    </div>
+    <div class="grid-2">
+      <div class="content-box">
+        <h3>Un pôle technologique majeur en Hauts-de-France</h3>
+        <p>Fondé en 1999 à Roubaix, OVHcloud est devenu le champion européen du cloud. Depuis notre campus et nos datacenters roubaisiens, nous gérons un réseau mondial à la pointe de l'innovation.</p>
+        <p>Nos équipes locales conçoivent, assemblent et opèrent nos propres serveurs pour garantir un contrôle total sur la chaîne de valeur numérique.</p>
+      </div>
+      <div class="content-box" style="background: #EFF6FF; padding: 2rem; border-radius: 8px; border-left: 4px solid var(--accent);">
+        <h4 style="color: var(--primary); font-size: 1.2rem; margin-bottom: 0.5rem;">Pourquoi choisir l'infrastructure de Roubaix ?</h4>
+        <ul style="list-style-type: none; padding-left: 0;">
+          <li style="margin-bottom: 0.75rem;">✔ <strong>Faible latence</strong> au cœur de l'Europe du Nord-Ouest.</li>
+          <li style="margin-bottom: 0.75rem;">✔ <strong>Souveraineté des données</strong> sous juridiction française et européenne.</li>
+          <li style="margin-bottom: 0.75rem;">✔ <strong>Rapport performance/prix</strong> inégalé sur les serveurs dédiés Bare Metal.</li>
+          <li>✔ <strong>Redondance réseau</strong> multi-terabit haute disponibilité.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" id="engagement">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h4>1999</h4>
+        <p>Création à Roubaix</p>
+      </div>
+      <div class="stat-item">
+        <h4>450 000+</h4>
+        <p>Serveurs déployés</p>
+      </div>
+      <div class="stat-item">
+        <h4>100%</h4>
+        <p>Souverain & Indépendant</p>
+      </div>
+      <div class="stat-item">
+        <h4>0.28 L/kWh</h4>
+        <p>Refroidissement fluide éco</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Landing page non-officielle de promotion d'OVHcloud Roubaix - Prête pour déploiement Git.</p>
+    <p>&copy; 2025 OVHcloud Roubaix - Souveraineté & Performance Cloud.</p>
+  </footer>
+
+</body>
+</html>
